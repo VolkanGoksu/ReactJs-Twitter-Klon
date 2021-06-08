@@ -1,9 +1,18 @@
 
 import React from 'react'
+
+import Container from './layout/Container'
+import SideBar from './layout/SideBar'
+import Content from './layout/Content'
+import Widgets from './layout/Widgets'
 function App() {
   return (
     <div className="App">
-       <h2 className="bg-primary-base">Hello World!</h2>
+      <Container>
+        <SideBar />
+        <Content />
+        <Widgets />
+      </Container>
     </div>
   );
 }
