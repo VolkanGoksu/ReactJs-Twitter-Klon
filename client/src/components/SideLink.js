@@ -1,13 +1,15 @@
 import React from 'react'
 
-const SideLink = ({ name, Icon ,active,onMenuItemClick}) => {
+const SideLink = ({ name, Icon ,active, onMenuItemClick}) => {
     const isActive = active === name ;
     return (
-        <div>
+
             <li className="group"  onClick={()=>onMenuItemClick(name)}>
-                <a href={name.toLowerCase()} className="cursor-pointer block text-xl pointer-events-none">
+                <a href={name} 
+                 className="pointer-events-none cursor-pointer block text-xl "
+                >
                     <div className="inline-block">
-                        <div className={`pl-3 pr-8 py-3 flex items-center group-hover:bg-primary-light group-hover:text-primary-base rounded-full text-xl mb-2
+                        <div className={`pl-3 pr-8 py-3 flex items-center group-hover:bg-primary-light group-hover:text-primary-base rounded-full text-lg mb-1
                           ${isActive ? 'text-primary-base':""}
                         `}>
                             <span>
@@ -20,7 +22,7 @@ const SideLink = ({ name, Icon ,active,onMenuItemClick}) => {
                     </div>
                 </a>
             </li>
-        </div>
+     
     )
 }
 
