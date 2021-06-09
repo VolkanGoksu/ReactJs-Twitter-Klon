@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import SideLink from '../components/SideLink'
 import { HomeIcon } from '../icons/Icon'
 import { NotificationsIcon } from '../icons/Icon'
@@ -10,6 +10,8 @@ import { MoreIcon } from '../icons/Icon'
 import { ExploreIcon } from '../icons/Icon'
 
 import logo from '../images/twitter.svg'
+
+import UserBox from '../components/UserBox'
 
 const sideLinks = [
     {
@@ -47,6 +49,11 @@ const sideLinks = [
 ]
 
 const SideBar = () => {
+    const[active,setActive]=useState("Home")
+
+    const handleMenuItemClick=(name)=>{
+       setActive(name)
+    }
     return (
         <div className="flex flex-col w-72  justify-between">
             <div>
@@ -56,13 +63,13 @@ const SideBar = () => {
                 <nav className="mb-4">
                     <ul>
                         {sideLinks.map(link=>(
-                            <SideLink key={link.name}  name={link.name} Icon={link.icon}/>
+                            <SideLink key={link.name}  name={link.name} Icon={link.icon} active={active} onMenuItemClick={handleMenuItemClick}/>
                         ))}
                     </ul>
                 </nav>
-                <button className="bg-primary-base hover:bg-primary-dark text=white shadow-lg rounded-full py-3 px-8 w-11/12 transform transition-colors duration-200">Tweet</button>
+                <button className="bg-primary-base hover:bg-primary-dark text:white shadow-lg rounded-full py-3 px-8 w-11/12 transform transition-colors duration-200">Tweet</button>
             </div>
-            <div>Alt taraf</div>
+            <div><UserBox /></div>
         </div>
     )
 }
