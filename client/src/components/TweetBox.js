@@ -11,7 +11,7 @@ const TweetBox = () => {
                 userName: '@Volkngoksu',
                 content:content,
                 timeStap:firebase.firestore.FieldValue.serverTimestamp(),
-                image: "https://i.tmgrup.com.tr/gq/img/920x615/20-08/25/gettyimages-miketyson.jpg?0.6931784146930756",
+                image: "https://icons-for-free.com/iconfiles/png/512/design+development+facebook+framework+mobile+react+icon-1320165723839064798.png",
                 avatar:"https://pbs.twimg.com/profile_images/1380420418327171072/xujU9k82_400x400.jpg"  
              })
              setContent('')

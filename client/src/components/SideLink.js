@@ -6,7 +6,7 @@ const SideLink = ({ name, Icon ,active, onMenuItemClick}) => {
 
             <li className="group"  onClick={()=>onMenuItemClick(name)}>
                 <a href={name} 
-                 className="pointer-events-none cursor-pointer block text-xl "
+                 className=" cursor-pointer block text-xl "
                 >
                     <div className="inline-block">
                         <div className={`pl-3 pr-8 py-3 flex items-center group-hover:bg-primary-light group-hover:text-primary-base rounded-full text-lg mb-1

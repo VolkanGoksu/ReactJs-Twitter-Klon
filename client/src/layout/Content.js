@@ -3,6 +3,8 @@ import db from '../firebase'
 import { PopulerIcon } from '../icons/Icon'
 import TweetBox from '../components/TweetBox'
 import Divider from '../components/Divider'
+import TweetList  from '../components/TweetList '
+
 const Content = () => {
     const [tweets,setTweets] = useState([])
     useEffect(() => {
@@ -24,6 +26,7 @@ const Content = () => {
                   <TweetBox /> 
             </div>
             <Divider/>   
+            <TweetList tweets={tweets} />
         </main>
     )
 }

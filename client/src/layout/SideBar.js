@@ -67,7 +67,7 @@ const SideBar = () => {
                         ))}
                     </ul>
                 </nav>
-                <button className="bg-primary-base hover:bg-primary-dark text:white shadow-lg rounded-full py-3 px-8 w-11/12 transform transition-colors duration-200">Tweet</button>
+                <button className="bg-primary-base hover:bg-primary-dark text-white shadow-lg rounded-full py-3 px-8 w-11/12 transform transition-colors duration-200">Tweet</button>
             </div>
             <div><UserBox /></div>
         </div>
