@@ -1,12 +1,16 @@
-import React, { useEffect } from 'react'
+import React, { useEffect ,useState} from 'react'
 import db from '../firebase'
 import { PopulerIcon } from '../icons/Icon'
 import TweetBox from '../components/TweetBox'
 import Divider from '../components/Divider'
 const Content = () => {
+    const [tweets,setTweets] = useState([])
     useEffect(() => {
-
-    })
+         db.collection('tweet')
+         .orderBy('timeStap','desc')
+         .onSnapshot(snapshot=>setTweets(snapshot.docs.map(doc=>doc.data())))
+    },[])
+    //console.log(tweets);
     return (
         <main className="flex-1 flex flex-col border-r border-l border-gray-extraLight">
             <header className="sticky top-0 z-10 flex justify-between items-center p-4 border-b border-gray-extraLight bg-white">
